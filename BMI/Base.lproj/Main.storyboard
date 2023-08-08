@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="50c-cI-7Lb">
+                                <rect key="frame" x="30" y="189" width="333" height="145"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키와 몸무게를 입력해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-kp-Lij">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vV2-Qv-IXO">
+                                        <rect key="frame" x="0.0" y="55" width="333" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6k-2o-d8e">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Esz-lI-I32"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSy-rV-V1l">
+                                                <rect key="frame" x="65" y="0.0" width="268" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="4eM-n2-LOD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="saA-af-8Ba">
+                                        <rect key="frame" x="0.0" y="110" width="333" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몸무게" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI3-ui-vIA">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="DDp-yb-Ye9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djs-vl-hE9">
+                                                <rect key="frame" x="65" y="0.0" width="268" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="xL5-Ok-18E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vV2-Qv-IXO" firstAttribute="trailing" secondItem="O9V-kp-Lij" secondAttribute="trailing" id="Efd-nv-sCq"/>
+                                    <constraint firstItem="saA-af-8Ba" firstAttribute="leading" secondItem="O9V-kp-Lij" secondAttribute="leading" id="H7m-Ia-NR0"/>
+                                    <constraint firstAttribute="trailing" secondItem="O9V-kp-Lij" secondAttribute="trailing" id="WKg-IU-LOO"/>
+                                    <constraint firstItem="saA-af-8Ba" firstAttribute="trailing" secondItem="O9V-kp-Lij" secondAttribute="trailing" id="WUX-1W-3E1"/>
+                                    <constraint firstItem="vV2-Qv-IXO" firstAttribute="leading" secondItem="O9V-kp-Lij" secondAttribute="leading" id="uz4-yz-DI7"/>
+                                    <constraint firstItem="O9V-kp-Lij" firstAttribute="leading" secondItem="50c-cI-7Lb" secondAttribute="leading" id="whp-5G-pEV"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kY1-6R-OyT">
+                                <rect key="frame" x="20" y="713" width="353" height="45"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Opw-RP-Bfg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="BMI 계산하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGD-LA-HJ5"/>
+                                    <segue destination="O0l-6a-rBl" kind="presentation" identifier="tobmiVC" modalPresentationStyle="fullScreen" id="PiW-OC-dZa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kY1-6R-OyT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2zG-ov-Ssf"/>
+                            <constraint firstItem="50c-cI-7Lb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="IY7-hX-lsk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50c-cI-7Lb" secondAttribute="trailing" constant="30" id="JrD-01-jYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kY1-6R-OyT" secondAttribute="bottom" constant="60" id="NgB-nF-MB1"/>
+                            <constraint firstItem="50c-cI-7Lb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VQy-HD-Mim"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kY1-6R-OyT" secondAttribute="trailing" constant="20" id="ifn-Aj-tlN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="kY1-6R-OyT" id="yL7-vc-Jwv"/>
+                        <outlet property="heightLabel" destination="f6k-2o-d8e" id="aS5-15-6I0"/>
+                        <outlet property="heightTextField" destination="lSy-rV-V1l" id="j9q-gB-yJD"/>
+                        <outlet property="mainLabel" destination="O9V-kp-Lij" id="gDI-wQ-HrH"/>
+                        <outlet property="weightLabel" destination="aI3-ui-vIA" id="Sep-4x-LK6"/>
+                        <outlet property="weightTextField" destination="djs-vl-hE9" id="0c0-zr-UZ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-534" y="1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zbu-cS-eje">
+            <objects>
+                <viewController id="O0l-6a-rBl" customClass="BMIViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hvA-Bb-XG0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="voC-IM-PfF">
+                                <rect key="frame" x="96.666666666666686" y="130" width="200" height="120.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI 결과값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-lS-jr7">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26.12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Au-xi-sbm">
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xrv-vb-Kzi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="살을 빼세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLK-xh-RBg">
+                                        <rect key="frame" x="0.0" y="100.33333333333334" width="200" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="T65-nK-nZo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3Q-RX-Aki">
+                                <rect key="frame" x="20" y="747" width="353" height="45"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="F2J-iL-Iec"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="다시 계산하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="recalculateButtonTapped:" destination="O0l-6a-rBl" eventType="touchUpInside" id="8p6-iJ-SIL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0yS-Le-P0p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="voC-IM-PfF" firstAttribute="top" secondItem="0yS-Le-P0p" secondAttribute="top" constant="130" id="EBR-k4-TQ4"/>
+                            <constraint firstItem="R3Q-RX-Aki" firstAttribute="leading" secondItem="0yS-Le-P0p" secondAttribute="leading" constant="20" id="Nai-ex-ddq"/>
+                            <constraint firstItem="voC-IM-PfF" firstAttribute="centerX" secondItem="hvA-Bb-XG0" secondAttribute="centerX" id="Pib-lY-7WZ"/>
+                            <constraint firstItem="0yS-Le-P0p" firstAttribute="bottom" secondItem="R3Q-RX-Aki" secondAttribute="bottom" constant="60" id="dFt-q8-iEM"/>
+                            <constraint firstItem="0yS-Le-P0p" firstAttribute="trailing" secondItem="R3Q-RX-Aki" secondAttribute="trailing" constant="20" id="f6K-Au-sIs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="DLK-xh-RBg" id="Yyp-aD-63W"/>
+                        <outlet property="recalculateButton" destination="R3Q-RX-Aki" id="5PL-EY-lei"/>
+                        <outlet property="resultValue" destination="9Au-xi-sbm" id="rgQ-Qa-3yx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmx-Ml-AT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
